@@ -19,10 +19,18 @@ As mentioned before, the Bullseye Model uses a bullseye target to map out the la
 ![Bullseye Model Target](/assets/target.png "Bullseye Model Target")
 
 ### 1. Project Scope
-More info coming soon
+A well-defined explanation of the scope of the project is key in being able to effectively move forward. Why is this important, you might ask? We need to define our project scope for a number of reasons.
+
+First, it limits the work you have to do and ensures both other people, as well as you, don't endlessly add thing to your to-do list to extent that you can't possibly keep up.
+
+Second, it helps developers understand the task in hand, both in terms of the technical consideration, as well as what the end result needs to be.
+
+Note: The scope here is from a technical perspective, not a business one. In other words, you may have received a project brief from your PM, but you'll still want analyze that and formulate a technical objective. This is because you may very well find that it can (and should) be broken down into multiple smaller projects from a technical perspective.
 
 ### 2. Define Packages
-More info coming soon
+Perhaps more necessaary for back-end systems than front-end (though not necessarily the case), I would suggest breaking down the problem into domains, each tackling a specific piece of the puzzle while working together to achieve the overall goal.
+
+This could manifest itself in different ways, and of course, can also be applied at different levels of abstraction. For example, you might look at a full-stack application and separate things by front-end vs. back-end. From there you could focus on the back-end and consider having a database package that facilitates DB communications and an auth package that acts as middleware to make sure requesti from the front-end are authenticated and/or authorized.
 
 ### 3. Package Scope and Context
 More info coming soon
@@ -38,3 +46,6 @@ More info coming soon
 
 ### 7. Data Flow
 More info coming soon
+
+## To-Do
+1. Consider how this model can help developers break things down into manageable tasks (whether they keep those task in their head or use something such as Jira is up to them)
