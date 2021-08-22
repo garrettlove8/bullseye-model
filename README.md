@@ -48,6 +48,13 @@ All of this before any code is even written.
 
 The piece of this puzzle is the context - that is, how does a package fit into a project? This is a pre-cursor to designing the process flow in step six.
 
+### UML Diagrams
+Consider using the following UML diagrams to help with this stage of the architecture process.
+
+1. [Package and Model Diagrams](https://www.uml-diagrams.org/package-diagrams-overview.html)
+2. [Class and Object Diagrams](https://www.uml-diagrams.org/class-diagrams-overview.html)
+3. [Composit Structure Diagrams](https://www.uml-diagrams.org/composite-structure-diagrams.html#collaboration-use-diagrams)
+
 **Note: As I read this section back over and over it feels increasingly more appropriate that it be a part of step two.**
 
 ## 4. UML Diagrams
@@ -57,25 +64,6 @@ As a general rule-of-thumb, each step should be accompanied by at least one UML 
 1. Different types of diagrams become stale at different rates. A diagram that illustrates the use-cases of a project will likely not change as often as a diagram that shows how and where various interfaces are impelemented.
 2. There are packages out there that will help you by automatically generating class diagrams as you update your code. For example, in Go there is [GoPlantUML](https://github.com/jfeliu007/goplantuml).
 3. If you always start will the architecture part of developing software (including for subsiquent software updates) your diagrams shouldn't become too outdated because you'll always include updating them in the development process, before you even touch any code.
-
-### Use Case Diagrams
-- Help show how software is intended to be used
-- Help define the scope of a project
-- Start to highlight common pieces across different use cases
-
-### Package 
-
-### Classes and interfaces
-
-### Process Flow Diagrams
-
-### Execution Flow
-
-### Data flow
-
-```
-NOTE: Focus on the things that I want to have be a part of a software's architecture design and then find the UML diagrams that help support those things
-```
 
 ## 5. API Definitions
 Let's talk about the APIs your software will expose (for example, RESTful endpoints), both at the public level to other software using your software, and internally, (for example, if you've broken things down into packages or classes).
@@ -130,3 +118,9 @@ For the process flow, consider using any combination of an [Information Flow Dia
 1. Consider how this model can help developers break things down into manageable tasks (whether they keep those task in their head or use something such as Jira is up to them)
 2. Add a section on where to put all this additional documentation. I'm thinking some combination of added sections to a `readme`, an additional `architecture.md` file, or even `readme` files in each package.
 3. Create an example architecture using the bullseye model (perhaps for one of my own projects).
+
+[] Add section on deployment strategy.
+
+[x] Add section on deployment strategy.
+
+[ ] Add section on deployment strategy.
