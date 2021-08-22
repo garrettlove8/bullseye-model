@@ -53,27 +53,80 @@ The piece of this puzzle is the context - that is, how does a package fit into a
 ## 4. UML Diagrams
 As a general rule-of-thumb, each step should be accompanied by at least one UML diagram, which we'll go over here.
 
-**Note:** I common complaint with UML diagrams is they can eassily become stale. While I don't have all the answer on how to prevent this, here are three things to consider:
+**Note:** A common complaint with UML diagrams is they can eassily become stale. While I don't have all the answer on how to prevent this, here are three things to consider:
 1. Different types of diagrams become stale at different rates. A diagram that illustrates the use-cases of a project will likely not change as often as a diagram that shows how and where various interfaces are impelemented.
 2. There are packages out there that will help you by automatically generating class diagrams as you update your code. For example, in Go there is [GoPlantUML](https://github.com/jfeliu007/goplantuml).
 3. If you always start will the architecture part of developing software (including for subsiquent software updates) your diagrams shouldn't become too outdated because you'll always include updating them in the development process, before you even touch any code.
 
-### Usecase Diagram
+### Use Case Diagrams
 - Help show how software is intended to be used
 - Help define the scope of a project
 - Start to highlight common pieces across different use cases
 
-###
+### Package 
 
-## 5. API Definition
-More info coming soon
+### Classes and interfaces
+
+### Process Flow Diagrams
+
+### Execution Flow
+
+### Data flow
+
+```
+NOTE: Focus on the things that I want to have be a part of a software's architecture design and then find the UML diagrams that help support those things
+```
+
+## 5. API Definitions
+Let's talk about the APIs your software will expose (for example, RESTful endpoints), both at the public level to other software using your software, and internally, (for example, if you've broken things down into packages or classes).
+
+While you don't need to have figure out and document every detail of your software's API implementations, you should come up with a clear understanding and starting point for how other software will interact with it. 
+
+There will no doubt be unknowns at this point which you can't possibly design for, but more likely than not, there is **at least** one thing you do know, which you can design for. This is a great starting point and foundation, which will only make things easier as you progress through your project.
+
+Ultimately, the API docs you create during this stage in a project will be built on as it progresses and should serve as the single source of truth for this documentation.
+
+### API Deisgn Goals
+1. Declare APIs that are consistent across all levels of your software.
+2. Understand and clearly define how software and developers can interact with your software
+3. Treat API documentation as a priority when it comes to developing the software (software with out documentation is borderline useless).
+
+Remember, it's one thing to not properly document the internals of how your software is built since that will only effect other developers working on it with you. However, it's a completely different thing (way worse) to not document how software completely separate from yours can interact with your API. Software who's public 
+
+### Approaches API Docs
+To start, it's worth noting that you have your own way of documenting your software's APIs go for it - as long as you do it. What matters is that it's done and is useful, not that you follow a specific approach.
+
+**HTTP**
+
+Using something like the [OpenAPI specification](https://github.com/OAI/OpenAPI-Specification), you design useful and effective APIs.
+
+You can also uses tools to generate your documentation such as [Swagger](https://swagger.io/) to auto generate a documentation UI for easy reference and discovery.
+
+**Package**
+If you are building your software in a modular fashion, with pieces broken down into components, package, or libraries, you'll want to clearly define how each of these pieces should be used.
+
+It's important to note that if you've followed this architecture model in order, you've already done this in step two, [Define Packages](##2.-define-packages).
 
 ## 6. Process Flow
-More info coming soon
+Now that we have at least one clearly defined use case, the package definitions, and some understanding of how our API(s) will be designed, we can start to think about what needs to happen with our software in order for the end-user to accomplish their business requirement(s) in a given usage scenario.
+
+While we don't need to declare every function (we can't reassonably expect to be able to do this at this point), we can start to piece together how the flow of process execution should work when performing a given task.
+
+### UML Diagrams
+For the process flow, consider using any combination of an [Activity Diagram](https://www.uml-diagrams.org/activity-diagrams.html), [Communication Diagram](https://www.uml-diagrams.org/communication-diagrams.html), [State Machine Diagrams](https://www.uml-diagrams.org/state-machine-diagrams.html), [Sequence Diagram](https://www.uml-diagrams.org/sequence-diagrams.html), or [Interaction Overview Diagram](https://www.uml-diagrams.org/interaction-overview-diagrams.html).
 
 ## 7. Data Flow
-More info coming soon
+Going down a level, once we have our process flow nailed down, we can start to think about the type(s) of data we'll need as a program moves through its processes.
+
+```
+Note: We already know the data types that will be used in each package.
+```
+
+### UML Diagrams
+For the process flow, consider using any combination of an [Information Flow Diagram](https://www.uml-diagrams.org/information-flow-diagrams.html).
+
 
 # To-Do
 1. Consider how this model can help developers break things down into manageable tasks (whether they keep those task in their head or use something such as Jira is up to them)
 2. Add a section on where to put all this additional documentation. I'm thinking some combination of added sections to a `readme`, an additional `architecture.md` file, or even `readme` files in each package.
+3. Create an example architecture using the bullseye model (perhaps for one of my own projects).
