@@ -115,10 +115,7 @@ For the process flow, consider using any combination of an [Information Flow Dia
 
 
 # To-Do
-1. Consider how this model can help developers break things down into manageable tasks (whether they keep those task in their head or use something such as Jira is up to them)
-2. Add a section on where to put all this additional documentation. I'm thinking some combination of added sections to a `readme`, an additional `architecture.md` file, or even `readme` files in each package.
-3. Create an example architecture using the bullseye model (perhaps for one of my own projects).
-
-- [] Add section on deployment strategy.
-- [x] Add section on deployment strategy.
+- [ ] Consider how this model can help developers break things down into manageable tasks (whether they keep those task in their head or use something such as Jira is up to them)
+- [ ] Add a section on where to put all this additional documentation. I'm thinking some combination of added sections to a `readme`, an additional `architecture.md` file, or even `readme` files in each package.
+- [ ] Create an example architecture using the bullseye model (perhaps for one of my own projects).
 - [ ] Add section on deployment strategy.
